@@ -4,25 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Store</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #333; }
-        .cta { margin-top: 20px; }
-        .cta button { padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        .cta button:hover { background-color: #0056b3; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #007BFF; color: white; padding: 20px; text-align: center; }
+        nav { margin: 10px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: white; }
+        nav a:hover { text-decoration: underline; }
+        .container { padding: 20px; }
+        .products { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .product { border: 1px solid #ccc; border-radius: 5px; padding: 10px; text-align: center; width: 200px; }
+        .product img { width: 100%; height: auto; }
+        footer { text-align: center; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h1>Welcome to My E-Store!</h1>
-    <p>Your one-stop shop for the best products.</p>
-    <div class="cta">
-        <button>Shop Now</button>
-    </div>
+
+<header>
+    <img src="logo.png" alt="Store Logo" style="width: 100px;"> <!-- Replace 'logo.png' with your logo file -->
+    <h1>Your Store Name</h1>
     <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
+</header>
+
+<div class="container">
+    <h2>Featured Products</h2>
+    <div class="products">
+        <div class="product">
+            <a href="product1.html">
+                <img src="product1.jpg" alt="Product 1"> <!-- Replace with your product image -->
+                <h3>Product 1</h3>
+                <p>$19.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product2.html">
+                <img src="product2.jpg" alt="Product 2"> <!-- Replace with your product image -->
+                <h3>Product 2</h3>
+                <p>$29.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product3.html">
+                <img src="product3.jpg" alt="Product 3"> <!-- Replace with your product image -->
+                <h3>Product 3</h3>
+                <p>$39.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product4.html">
+                <img src="product4.jpg" alt="Product 4"> <!-- Replace with your product image -->
+                <h3>Product 4</h3>
+                <p>$49.99</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product5.html">
+                <img src="product5.jpg" alt="Product 5"> <!-- Replace with your product image -->
+                <h3>Product 5</h3>
+                <p>$59.99</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Your Store Name. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
-
