@@ -19,16 +19,65 @@
 
     <div class="container">
         <h2>Product 1</h2>
-        <img src="product1.jpg" alt="Product 1"> <!-- Replace with actual product image -->
+        <img src="product1.jpg" alt="Product 1">
         <p>Price: $19.99</p>
         <p>Description of Product 1 goes here. Include features, benefits, and any other relevant information.</p>
-        <button>Add to Cart</button>
-        <br><br>
-        <a href="index.html">Back to Home</a>
+
+        <!-- Client Information Form for Product Request -->
+        <h3>Request this product</h3>
+        <form id="product-request-form">
+            <input type="hidden" id="product-name" name="product-name" value="Product 1"> <!-- Hidden field for product name -->
+            
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <label for="phone">Your Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+
+            <button type="submit">Request Product</button>
+        </form>
+
+        <div id="response"></div> <!-- This will show the response message -->
     </div>
 
     <footer>
         <p>&copy; 2024 Your Store Name. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('product-request-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            const formData = {
+                product: document.getElementById('product-name').value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            };
+
+            // Send the form data to the Google Apps Script web app
+            fetch('YOUR_WEB_APP_URL', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(result => {
+                document.getElementById('response').innerText = 'Request submitted successfully!';
+                document.getElementById('product-request-form').reset(); // Reset the form after submission
+            })
+            .catch(error => {
+                document.getElementById('response').innerText = 'Error submitting the request. Please try again.';
+            });
+        });
+    </script>
 </body>
 </html>
