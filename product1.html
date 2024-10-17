@@ -51,7 +51,7 @@
             const data = Object.fromEntries(formData.entries());
 
             // إرسال البيانات إلى Google Apps Script
-            fetch("https://script.google.com/macros/s/AKfycbzqUXpa8OC1N0S0lFKzUFq-oZ5LzyV9PEROgLNJbtMUOA1jbBUtKnwSxCTOpWJMF2fl/exec", { // تأكد من استبدال YOUR_WEB_APP_URL بالرابط الخاص بتطبيق الويب
+            fetch("YOUR_WEB_APP_URL", { // تأكد من استبدال YOUR_WEB_APP_URL بالرابط الخاص بتطبيق الويب
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
