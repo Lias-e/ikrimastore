@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سلة التسوق</title>
+    <title>سلة التسوق - عكرمة</title>
     
     <!-- تضمين خطوط Google -->
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&family=Jomhuria&family=Mirza&display=swap" rel="stylesheet">
@@ -15,8 +15,7 @@
 
 <header>
     <div class="header-container">
-        <h1>عكرمة</h1>
-        <img src="logo.png" alt="شعار المتجر" style="max-width: 100px;">
+        <img src="logo.png" alt="شعار المتجر" class="logo">
         <nav>
             <a href="index.html">الرئيسية</a>
             <a href="about.html">نبذة عنا</a>
@@ -30,80 +29,29 @@
     <h2>سلة التسوق</h2>
     <div class="cart-items">
         <div class="cart-item">
-            <img src="product1.jpg" alt="المنتج 1" style="max-width: 100px;">
-            <div class="item-details">
-                <h3>المنتج 1</h3>
-                <p>2000 دج</p>
-                <input type="number" value="1" min="1" class="quantity-input">
-                <button>إزالة</button>
-            </div>
+            <h3>المنتج 1</h3>
+            <p>السعر: 2000 دج</p>
+            <button>إزالة من السلة</button>
         </div>
         <div class="cart-item">
-            <img src="product2.jpg" alt="المنتج 2" style="max-width: 100px;">
-            <div class="item-details">
-                <h3>المنتج 2</h3>
-                <p>3000 دج</p>
-                <input type="number" value="1" min="1" class="quantity-input">
-                <button>إزالة</button>
-            </div>
+            <h3>المنتج 2</h3>
+            <p>السعر: 3000 دج</p>
+            <button>إزالة من السلة</button>
         </div>
         <div class="cart-item">
-            <img src="product3.jpg" alt="المنتج 3" style="max-width: 100px;">
-            <div class="item-details">
-                <h3>المنتج 3</h3>
-                <p>4000 دج</p>
-                <input type="number" value="1" min="1" class="quantity-input">
-                <button>إزالة</button>
-            </div>
+            <h3>المنتج 3</h3>
+            <p>السعر: 4000 دج</p>
+            <button>إزالة من السلة</button>
         </div>
     </div>
-
-    <div class="total">
-        <h3>المجموع الكلي: <span id="total-amount">9000 دج</span></h3>
-        <button class="checkout-button">إتمام الطلب</button>
-    </div>
+    <h3>الإجمالي: 9000 دج</h3>
+    <button>إتمام الشراء</button>
 </div>
 
 <footer>
     <p>&copy; 2024 عكرمة. جميع الحقوق محفوظة.</p>
     <p>للتواصل: <a href="mailto:your-email@example.com" style="color: white;">your-email@example.com</a></p>
 </footer>
-
-<script>
-    // تحديث المجموع الكلي
-    const totalAmountElement = document.getElementById('total-amount');
-    const quantityInputs = document.querySelectorAll('.quantity-input');
-
-    quantityInputs.forEach(input => {
-        input.addEventListener('change', updateTotal);
-    });
-
-    function updateTotal() {
-        let total = 0;
-
-        // تحديث السعر الإجمالي
-        const cartItems = document.querySelectorAll('.cart-item');
-        cartItems.forEach((item, index) => {
-            const price = parseInt(item.querySelector('p').textContent);
-            const quantity = parseInt(quantityInputs[index].value);
-            total += price * quantity;
-        });
-
-        totalAmountElement.textContent = `${total} دج`;
-    }
-
-    // إضافة وظيفة إزالة
-    const removeButtons = document.querySelectorAll('.item-details button');
-    removeButtons.forEach(button => {
-        button.addEventListener('click', removeItem);
-    });
-
-    function removeItem(event) {
-        const item = event.target.closest('.cart-item');
-        item.remove();
-        updateTotal();
-    }
-</script>
 
 </body>
 </html>
