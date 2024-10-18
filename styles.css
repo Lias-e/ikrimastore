@@ -1,9 +1,9 @@
 :root {
-    --text: #040316;
-    --background: #f7f1e0;
-    --primary: #efba66;
-    --secondary: #e89365;
-    --accent: #92da5f;
+    --text: #040316; /* اللون للنصوص */
+    --background: #f7f1e0; /* لون الخلفية */
+    --primary: #efba66; /* اللون الأساسي */
+    --secondary: #e89365; /* اللون الثانوي */
+    --accent: #92da5f; /* لون التمييز */
 }
 
 body {
