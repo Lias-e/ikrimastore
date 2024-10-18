@@ -1,95 +1,43 @@
-:root {
-    --text: #040316; /* اللون للنصوص */
-    --background: #f7f1e0; /* لون الخلفية */
-    --primary: #efba66; /* اللون الأساسي */
-    --secondary: #e89365; /* اللون الثانوي */
-    --accent: #92da5f; /* لون التمييز */
-}
-
-body {
-    font-family: 'Markazi Text', serif; /* استخدام خط Markazi Text */
-    background-color: var(--background);
-    color: var(--text);
-    text-align: right; /* لجعل النصوص تتجه لليمين */
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: var(--primary);
-    color: white;
-    padding: 10px 20px;
-}
-
-.header-container {
+.cart-items {
     display: flex;
-    align-items: center; /* محاذاة العناصر في المنتصف عمودياً */
-    justify-content: space-between; /* توزيع العناصر */
+    flex-direction: column; /* وضع العناصر في عمود */
+    margin: 20px 0;
 }
 
-nav {
-    margin-right: auto; /* دفع الروابط إلى اليسار */
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-family: 'Jomhuria', cursive; /* استخدام خط Jomhuria */
-}
-
-.cart-icon {
-    font-size: 20px; /* حجم أيقونة السلة */
-}
-
-.container {
-    padding: 20px;
-}
-
-h2 {
-    font-family: 'Mirza', cursive; /* استخدام خط Mirza */
-}
-
-.products {
+.cart-item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* توزيع المنتجات بشكل أفضل */
-}
-
-.product {
+    align-items: center;
+    justify-content: space-between; /* توزيع العناصر بشكل جيد */
+    margin: 15px 0;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin: 15px;
-    padding: 10px;
     background-color: white;
-    transition: transform 0.3s; /* تأثير التحويل */
-    width: 30%; /* تحديد عرض المنتج */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للمنتجات */
 }
 
-.product:hover {
-    transform: scale(1.05); /* تكبير المنتج عند المرور عليه */
+.item-details {
+    flex-grow: 1;
+    margin-right: 15px; /* إضافة هامش للجانب الأيمن */
 }
 
-button {
+.quantity-input {
+    width: 50px;
+    margin-right: 10px; /* إضافة هامش للجانب الأيمن */
+}
+
+.total {
+    text-align: left; /* محاذاة المجموع الكلي إلى اليسار */
+    margin-top: 20px;
+}
+
+.checkout-button {
     background-color: var(--secondary);
     color: white;
-    border: none;
     padding: 10px 15px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
+.checkout-button:hover {
     background-color: var(--accent); /* تغيير لون الزر عند المرور عليه */
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: var(--primary);
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
