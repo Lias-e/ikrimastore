@@ -70,7 +70,39 @@
 </footer>
 
 <script>
-    // هنا يمكنك إضافة الجافاسكريبت لتحديث المجموع الكلي أو إزالة العناصر من السلة
+    // تحديث المجموع الكلي
+    const totalAmountElement = document.getElementById('total-amount');
+    const quantityInputs = document.querySelectorAll('.quantity-input');
+
+    quantityInputs.forEach(input => {
+        input.addEventListener('change', updateTotal);
+    });
+
+    function updateTotal() {
+        let total = 0;
+
+        // تحديث السعر الإجمالي
+        const cartItems = document.querySelectorAll('.cart-item');
+        cartItems.forEach((item, index) => {
+            const price = parseInt(item.querySelector('p').textContent);
+            const quantity = parseInt(quantityInputs[index].value);
+            total += price * quantity;
+        });
+
+        totalAmountElement.textContent = `${total} دج`;
+    }
+
+    // إضافة وظيفة إزالة
+    const removeButtons = document.querySelectorAll('.item-details button');
+    removeButtons.forEach(button => {
+        button.addEventListener('click', removeItem);
+    });
+
+    function removeItem(event) {
+        const item = event.target.closest('.cart-item');
+        item.remove();
+        updateTotal();
+    }
 </script>
 
 </body>
