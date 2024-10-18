@@ -38,6 +38,10 @@ nav a {
     font-family: 'Jomhuria', cursive; /* استخدام خط Jomhuria */
 }
 
+.cart-icon {
+    font-size: 20px; /* حجم أيقونة السلة */
+}
+
 .container {
     padding: 20px;
 }
