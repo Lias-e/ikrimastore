@@ -1,71 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Store</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>عكرمة</title>
+    <link rel="stylesheet" href="styles.css"> <!-- رابط إلى ملف CSS الخاص بك -->
+    
+    <!-- تضمين خطوط Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&family=Jomhuria&family=Lalezar&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text: #040316;
+            --background: #f7f1e0;
+            --primary: #efba66;
+            --secondary: #e89365;
+            --accent: #92da5f;
+        }
+        
+        body {
+            font-family: 'Markazi Text', serif; /* استخدام خط Markazi Text */
+            background-color: var(--background);
+            color: var(--text);
+            text-align: right; /* لجعل النصوص تتجه لليمين */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-family: 'Jomhuria', cursive; /* استخدام خط Jomhuria */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            font-family: 'Lalezar', cursive; /* استخدام خط Lalezar */
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* توزيع المنتجات بشكل أفضل */
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 15px;
+            padding: 10px;
+            background-color: white;
+            transition: transform 0.3s; /* تأثير التحويل */
+            width: 30%; /* تحديد عرض المنتج */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للمنتجات */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* تكبير المنتج عند المرور عليه */
+        }
+
+        button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--accent); /* تغيير لون الزر عند المرور عليه */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: var(--primary);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Store Logo"> <!-- Replace 'logo.png' with your logo file -->
-    <h1>Your Store Name</h1>
+    <img src="logo.png" alt="شعار المتجر" style="max-width: 200px;">
+    <h1>عكرمة</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">نبذة عنا</a>
+        <a href="contact.html">اتصل بنا</a>
     </nav>
 </header>
 
 <div class="container">
-    <h2>Featured Products</h2>
+    <h2>المنتجات المميزة</h2>
     <div class="products">
         <div class="product">
             <a href="product1.html">
-                <img src="product1.jpg" alt="Product 1"> <!-- Replace with your product image -->
-                <h3>Product 1</h3>
-                <p>$19.99</p>
-                <button>Add to Cart</button>
+                <img src="product1.jpg" alt="المنتج 1" style="max-width: 100%;">
+                <h3>المنتج 1</h3>
+                <p>2000 دج</p>
+                <button>أضف إلى السلة</button>
             </a>
         </div>
         <div class="product">
             <a href="product2.html">
-                <img src="product2.jpg" alt="Product 2"> <!-- Replace with your product image -->
-                <h3>Product 2</h3>
-                <p>$29.99</p>
-                <button>Add to Cart</button>
+                <img src="product2.jpg" alt="المنتج 2" style="max-width: 100%;">
+                <h3>المنتج 2</h3>
+                <p>3000 دج</p>
+                <button>أضف إلى السلة</button>
             </a>
         </div>
         <div class="product">
             <a href="product3.html">
-                <img src="product3.jpg" alt="Product 3"> <!-- Replace with your product image -->
-                <h3>Product 3</h3>
-                <p>$39.99</p>
-                <button>Add to Cart</button>
-            </a>
-        </div>
-        <div class="product">
-            <a href="product4.html">
-                <img src="product4.jpg" alt="Product 4"> <!-- Replace with your product image -->
-                <h3>Product 4</h3>
-                <p>$49.99</p>
-                <button>Add to Cart</button>
-            </a>
-        </div>
-        <div class="product">
-            <a href="product5.html">
-                <img src="product5.jpg" alt="Product 5"> <!-- Replace with your product image -->
-                <h3>Product 5</h3>
-                <p>$59.99</p>
-                <button>Add to Cart</button>
+                <img src="product3.jpg" alt="المنتج 3" style="max-width: 100%;">
+                <h3>المنتج 3</h3>
+                <p>4000 دج</p>
+                <button>أضف إلى السلة</button>
             </a>
         </div>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2024 Your Store Name. All rights reserved.</p>
+    <p>&copy; 2024 عكرمة. جميع الحقوق محفوظة.</p>
+    <p>للتواصل: <a href="mailto:your-email@example.com" style="color: white;">your-email@example.com</a></p>
 </footer>
 
 </body>
